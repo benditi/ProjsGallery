@@ -104,6 +104,12 @@ body {
     height: 20%;
 }
 
+/* .offcanvas-aside .message{
+    height: 90px;
+    width: 350px; 
+    align-items: flex-start;
+} */
+
 @media (min-width: 575px) {
     .offcanvas-btn-open {
         margin-right: 30vw;
@@ -190,7 +196,7 @@ body {
 header.masthead {
     text-align: center;
     color: white;
-    background-image: url("../img/header-bg.jpg");
+    background-image: url("../img/spain-bg.jpg");
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: center center;

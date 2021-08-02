@@ -1,4 +1,5 @@
 $(document).ready(initPage);
+$('.btn.btn-primary').click(sendMail)
 
 function initPage() {
     createProjs()
@@ -43,11 +44,22 @@ function renderModal(projId) {
           <li>Date: ${proj.publishedAt}</li>
           <li>Client: Threads</li>
           <li>Category: ${proj.labels}</li>
-          <a href="${proj.url}">Link</a>
+          <a href="${proj.url}" target="_blank">Link</a>
         </ul>
         <button class="btn btn-primary" data-dismiss="modal" type="button">
             <i class="fa fa-times"></i>
             Close Project</button>`
 
     $(`.modal-body`).html(strHTML);
+}
+
+function sendMail(){
+    var strEmail = $('.contact .email').val();
+    var strSubject = $('.contact .subject').val();
+    var strBody = $('.contact .message').val();
+    var strUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${strEmail}&su=${strSubject}t&body=${strBody}`;
+    console.log(strUrl);
+    // location.assign(strUrl, "_blank");
+    window.open(strUrl, "_blank")
+    openCanvas();
 }
